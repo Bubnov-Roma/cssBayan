@@ -1,0 +1,121 @@
+* {
+    transition: 0.5s all ease;
+	padding: 0px;
+	margin: 0px;
+	border: none;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 52rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1;
+    line-height: 1;
+    background-color: antiquewhite;
+}
+
+.header {
+    padding: 0.3rem 0;
+}
+
+.header_title {
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.mem_item {
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem  brown;
+    border-bottom-style: inset;
+    cursor: pointer;
+    width: 100%;
+}
+
+.mem_item:hover {
+    background-color: #fefefe;
+}
+
+.mem_item:hover .mem_item__title {
+    color: #4b4b4b;
+}
+
+.mem_item__title {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mem_item__content-img {
+    margin: 0 auto;
+    opacity: 0;
+    width: 0;
+    height: 0; 
+} 
+
+.mem_item:hover .mem_item__content-img {
+    opacity: 100%;
+    height: 100%;
+    width: 100%; 
+}
+
+.mem_item__content {
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    line-height: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.icon {
+    opacity: 0;
+    transform: rotate(135deg);
+    width: 0.7rem;
+    height: 0.7rem;
+    margin: 0 2%;
+    background: url(./assets/icon/x_icon.svg) no-repeat center;
+    background-size: cover;
+}
+
+main:hover .icon {
+    opacity: 1;
+}
+
+.mem_item:hover .icon {
+    transform: rotate(0deg);
+}
+
+.mem_item__input {
+    display: block;
+    appearance: none;
+    width: 100%;
+    height: 100%; 
+}
+
+.mem_item__input:checked + .mem_item__content > .mem_item__content-img {
+    opacity: 1;
+    height: 50%;
+    width: 50%; 
+}
+
+.mem_item__input:checked + .mem_item__content > .mem_item__title {
+    color: #4b4b4b;
+}
+
