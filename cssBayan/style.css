@@ -1,9 +1,11 @@
 * {
     transition: 0.3s all ease;
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 	border: none;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 body {
@@ -118,6 +120,26 @@ main:hover .icon {
 
 .mem_item__input:checked + .mem_item__content {
     color: #000000;
+}
+
+.footer__wrapper {
+    padding: 10% 0 5%;
+    width: 100%;
+}
+
+.footer__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.githab a{
+    color: #000000;
+}
+
+.footer__list-item_rs {
+    width: 9%;
 }
 
 /* <--- Media ----> */
